@@ -1,0 +1,60 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="index.xhtml">
+
+	<ui:define name="projetos">
+		<li class="current">
+			<h:link outcome="projetos.xhtml" value="Projetos"/>
+		</li>	
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<div class="div1">
+			<div class="div2">
+				<div class="div3">
+					<h2>Projetos</h2>
+					
+					<div class="imagemTopo">
+						<div class="imagemRodape">
+							<div class="imagemConteudo">
+								<h4><a href="http://diogoribeiro.medianewsonline.com/" title="Site para Diogo Ribeiro Produções" target="_blank">Site para Diogo Ribeiro Produções</a></h4>
+									<p>janeiro de 2016</p>
+									<p>Site criado para divulgação do trabalho do fotógrafo Diogo Ribeiro.</p>
+									<p>Tecnologias: PHP Orientado a Objetos, PDO, AJAX, HTML, CSS, MySQL, .htaccess do Apache para URLs amigáveis.</p>
+
+								<h4>Meu Site</h4>
+									<p>julho de 2014</p>
+									<p>É um site que fiz para divulgar o meu currículo e para dar a oportunidade de as pessoas poderem entrar em contato comigo através do mesmo.</p>
+									<p>Tecnologias: JSF e Tomcat</p>
+
+								<h4>Jogo da Forca</h4>
+									<p>julho de 2014</p>
+									<p>Projeto criado durante as aulas de lógica do CEDUP.</p>
+									<p>Tecnologias: Pascal</p>
+									<p><a href="#{resource['exe/forca.exe']}" download="Forca" title="Clique aqui para baixar o jogo">Clique aqui para baixar o jogo.</a></p>
+									
+								<h4><a href="http://lizete.esy.es/" title="Projeto TCC - Site e Sistema para revendedora autônoma" target="_blank">Projeto TCC - Site e Sistema para revendedora autônoma</a></h4>
+									<p>novembro de 2013</p>
+									<p>Neste projeto foi criado um site, uma área restrita à
+									clientes e um sistema web, como solução para a grande dificuldade de
+									gerenciamento do negócio da revendedora autônoma. Ao qual, através desta
+									solução, a revendedora pode se organizar de maneira clara e objetiva, trazendo
+									efetividade em seu trabalho exercido. Ajuda também na divulgação do seu
+									serviço e produtos por meio do site.</p>
+									<p>Tecnologias: PHP Orientado a Objetos, Apache, URLs Amigáveis, PDO, MySQL, HTML5, CSS3, Responsive Design, JavaScript, JQuery, AJAX, Bootstrap, ARQUITETURA MVC E PADRÃO DAO.</p>
+									
+								<h4><a href="http://helpingdogsandcats.mywebcommunity.org/" title="1ª Projeto Web" target="_blank">1ª Projeto Web</a></h4>
+									<p>2012</p>
+									<p>Foi o meu primeiro projeto publicado na Web, o mesmo foi solicitado pela professora de inglês(Karina) do SENAI.</p>
+									<p>Tecnologias: HTML, CSS e PHP</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+	
+</ui:composition>

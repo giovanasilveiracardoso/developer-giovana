@@ -1,0 +1,53 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="index.xhtml">
+
+	<ui:define name="contato">
+		<li class="current">
+			<h:link outcome="contato.xhtml" value="Contato"/>
+		</li>					
+	</ui:define>
+
+	<ui:define name="conteudo">
+		<div class="div1">
+			<div class="div2">
+				<div class="div3">
+					<h2>Contato</h2>
+					
+					<h:form id="form">
+						<h:messages styleClass="mensagem" infoClass="mensagemInfo" errorClass="mensagemError" />
+						<p><span class="mensagemError">*</span> Campos Obrigatórios</p>
+						
+						<h:outputLabel for="nome">Nome: <span class="mensagemError">*</span></h:outputLabel>
+						<h:inputText id= "nome" value="#{contatoController.contato.nome}" size="51" required="true" requiredMessage="Favor preencher o campo Nome!" maxlength="50" />
+									
+						<h:outputLabel for="email" styleClass="margin10">E-mail: <span class="mensagemError">*</span></h:outputLabel>
+						<h:inputText id= "email" value="#{contatoController.contato.email}" size="51" required="true" requiredMessage="Favor preencher o campo E-mail!" maxlength="100" validatorMessage="O e-mail digitado é inválido!">
+							<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+						</h:inputText>
+									
+						<h:outputLabel for="assunto" styleClass="margin10">Assunto: <span class="mensagemError">*</span></h:outputLabel>
+						<h:inputText id= "assunto" value="#{contatoController.contato.assunto}" size="51" required="true" requiredMessage="Favor preencher o campo Assunto!" maxlength="150" />
+									
+						<h:outputLabel for="descricao" styleClass="margin10">Descrição: <span class="mensagemError">*</span></h:outputLabel>
+						<h:inputTextarea id="descricao" styleClass= "descricao" value="#{contatoController.contato.descricao}" cols="50" rows="10" required="true" requiredMessage="Favor preencher o campo Descrição!" maxlength="500" />
+									
+						<h:commandButton value="Salvar" actionListener="#{contatoController.enviar()}" styleClass="botao" />
+					</h:form>
+					
+					<div id="contatoRight">
+						<p>Santa Catarina, Florianópolis.</p>
+						<p>E-mail : <a href="mailto:giovanasilveiracardoso@gmail.com">giovanasilveiracardoso@gmail.com</a></p>
+						<div id="share">
+							<h:outputLink value="https://www.linkedin.com/pub/giovana-silveira-cardoso/53/126/26" target="_blank" id="linkedin" title="Linkedin" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+	
+</ui:composition>

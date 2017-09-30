@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Giovana</title>
+	<meta name="author" content="Giovana Silveira Cardoso" />
+	<meta name="keywords"
+		content="Giovana Silveira Cardoso, Desenvolvedor, Desenvolvedor Web, Programador, Nexxera, Tecmedia, SENAI, Techpeople, Tubarão, Programador Santa Catarina, Santa Catarina" />
+	<link rel="shortcut icon" href="resources/images/shortcut.ico"
+		type="image/x-icon" />
+	<h:outputStylesheet name="style.css" library="css" />
+</h:head>
+<h:body>
+	<div id="header">
+		<ui:include src="tiles/topo.xhtml" />
+	</div>
+
+	<div id="body">
+		<ui:insert name="conteudo">
+			<div id="figure">
+				<div>
+					<h:link outcome="index.html">
+						<h:graphicImage library="images" name="jsf.png" alt="Image"
+							style="opacity: 0.9; border-radius: 10px;" />
+					</h:link>
+				</div>
+			</div>
+		</ui:insert>
+	</div>
+
+	<div id="footer">
+		<ui:include src="tiles/rodape.xhtml" />
+	</div>
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script',
+				'//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-52983731-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</h:body>
+</html>

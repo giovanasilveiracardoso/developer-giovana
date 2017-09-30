@@ -1,0 +1,35 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+	<div>
+		<h:link outcome="home.html"><h1 id="logo">Giovana Silveira Cardoso</h1></h:link>
+		<ul>
+			<ui:insert name="home">
+				<li>
+					<h:link outcome="home.xhtml" value="Home"/>
+				</li>
+			</ui:insert>
+			
+			<ui:insert name="curriculo">
+				<li>
+					<h:link outcome="curriculo.xhtml" value="Currículo"/>
+				</li>
+			</ui:insert>
+			
+			<ui:insert name="projetos">
+				<li>
+					<h:link outcome="projetos.xhtml" value="Projetos"/>
+				</li>
+			</ui:insert>
+			
+			<ui:insert name="contato">
+				<li>
+					<h:link outcome="contato.xhtml" value="Contato"/>
+				</li>					
+			</ui:insert>
+		</ul>
+	</div>
+		
+</ui:composition>
